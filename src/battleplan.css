@@ -1,0 +1,150 @@
+/* ═══ BATTLE PLAN PAGE STYLES ═══ */
+
+/* Schedule */
+.schedule-list { display: flex; flex-direction: column; gap: 8px; }
+.sched-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+}
+.sched-time {
+  font-family: 'Inter', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  min-width: 72px;
+}
+.sched-icon { font-size: 1rem; }
+.sched-text { color: var(--text-secondary); flex: 1; }
+.sched-text strong { color: var(--text-primary); }
+
+/* Phase Tabs */
+.phase-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.phase-tab {
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  transition: all 0.3s var(--ease-out);
+}
+.phase-tab:hover { 
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+.phase-tab.active {
+  background: var(--gradient-amber);
+  color: #0a0a0a;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+/* Phase Content */
+.phase-content { display: none; }
+.phase-content.active { display: block; }
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.phase-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient-amber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.phase-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.phase-mission {
+  font-size: 0.88rem;
+  color: var(--text-accent);
+  margin-top: 4px;
+}
+
+/* Track Weeks */
+.track-week {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  line-height: 1.5;
+}
+.track-week:last-of-type { border-bottom: none; }
+.track-week strong { color: var(--text-primary); }
+.track-week code {
+  background: rgba(249,115,22,0.1);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--text-accent);
+}
+.track-resource {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--text-accent);
+  font-weight: 500;
+}
+
+/* Checklist */
+.checklist { display: flex; flex-direction: column; gap: 10px; }
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 8px 0;
+}
+.check-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-accent);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.check-item input[type="checkbox"]:checked {
+  background: var(--gradient-amber);
+  border-color: #f59e0b;
+}
+.check-item input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0a0a0a;
+  font-size: 12px;
+  font-weight: 700;
+}
+.check-item input[type="checkbox"]:checked + span {
+  color: var(--text-primary);
+  text-decoration: line-through;
+  text-decoration-color: var(--text-accent);
+}
+.checklist-big .check-item { font-size: 0.95rem; padding: 10px 0; }

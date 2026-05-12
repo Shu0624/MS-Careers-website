@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universities — Elite Master Plan</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/pages.css" />
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="container">
+      <div class="section-label">Country-Wise Guide</div>
+      <h1 class="section-title">Universities Guide</h1>
+      <p class="section-desc">Dream / Target / Safe tier universities across 7 countries — with costs, salaries, and admission requirements.</p>
+    </div>
+  </div>
+
+  <!-- ═══ DECISION MATRIX ═══ -->
+  <section class="section" id="matrix">
+    <div class="container">
+      <div class="section-label fade-in">Quick Decision</div>
+      <h2 class="section-title fade-in">Which Country Fits You?</h2>
+      <div class="table-wrap fade-in">
+        <table class="table">
+          <thead><tr><th>Priority</th><th>Best Country</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Highest salary</td><td class="highlight">🇺🇸 USA</td><td>$100K+ post-MS</td></tr>
+            <tr><td>Best value (low cost)</td><td class="highlight">🇩🇪 Germany</td><td>Near-free tuition</td></tr>
+            <tr><td>Easiest PR</td><td class="highlight">🇨🇦 Canada</td><td>PGWP → PR path</td></tr>
+            <tr><td>Fully funded</td><td class="highlight">🇯🇵 Japan / 🇰🇷 Korea</td><td>MEXT / GKS scholarships</td></tr>
+            <tr><td>Fastest degree</td><td class="highlight">🇬🇧 UK</td><td>1-year MS</td></tr>
+            <tr><td>High salary Asia</td><td class="highlight">🇸🇬 Singapore</td><td>SGD 80K+</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ APPLICATION STRATEGY ═══ -->
+  <section class="section" id="strategy" style="padding-top:0">
+    <div class="container">
+      <div class="grid-2 fade-in">
+        <div class="card" style="border-color:var(--border-accent);box-shadow:var(--glow-small)">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">Application Strategy</h3>
+          <p class="card-text" style="margin-bottom:12px">Never apply only to dream universities. Spread your bets.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span class="card-tag tag-red">2 Dream</span>
+            <span class="card-tag tag-amber">4 Target</span>
+            <span class="card-tag tag-green">3 Safe</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3 class="card-title">What You Need</h3>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:0.82rem;margin-top:8px">
+            <div style="display:flex;justify-content:space-between"><span style="color:var(--text-tertiary)">CGPA</span><span style="font-weight:600">7.5 ✅ OK for Target/Safe</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="color:var(--text-tertiary)">IELTS</span><span style="font-weight:600">7+ needed</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="color:var(--text-tertiary)">GRE</span><span style="font-weight:600">310+ (optional many)</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="color:var(--text-tertiary)">Projects</span><span style="font-weight:600">3–4 strong</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="color:var(--text-tertiary)">SOP</span><span style="font-weight:600">Excellent (unique per uni)</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="color:var(--text-tertiary)">LORs</span><span style="font-weight:600">2–3 professors/mentors</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COUNTRY TABS ═══ -->
+  <section class="section" id="countries">
+    <div class="container">
+      <div class="section-label fade-in">Explore by Country</div>
+      <h2 class="section-title fade-in">University Lists</h2>
+      <p class="section-desc fade-in">Click a country to see Dream / Target / Safe universities with costs and details.</p>
+
+      <div class="country-tabs fade-in" id="countryTabs">
+        <button class="country-tab active" data-country="usa"><span class="country-flag">🇺🇸</span> USA</button>
+        <button class="country-tab" data-country="germany"><span class="country-flag">🇩🇪</span> Germany</button>
+        <button class="country-tab" data-country="canada"><span class="country-flag">🇨🇦</span> Canada</button>
+        <button class="country-tab" data-country="uk"><span class="country-flag">🇬🇧</span> UK</button>
+        <button class="country-tab" data-country="japan"><span class="country-flag">🇯🇵</span> Japan</button>
+        <button class="country-tab" data-country="korea"><span class="country-flag">🇰🇷</span> S. Korea</button>
+        <button class="country-tab" data-country="singapore"><span class="country-flag">🇸🇬</span> Singapore</button>
+      </div>
+
+      <!-- USA -->
+      <div class="country-panel active" id="usa">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>United States</h3>
+            <p>Highest Salary, Most Competitive</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹35–60L</span><span class="cs-label">Total Cost</span></div>
+            <div class="cs"><span class="cs-val highlight">$80K–$150K</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">H1B Lottery</span><span class="cs-label">Visa (uncertain)</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>Tier</th><th>University</th><th>Why Choose</th><th>Tuition/Year</th></tr></thead>
+            <tbody>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">Arizona State University</td><td>Strong CS, accepts 7.5 CGPA</td><td>$35K–40K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">Northeastern University</td><td>Co-op program = paid work during MS</td><td>$40K–45K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">University at Buffalo (SUNY)</td><td>Affordable, good AI program</td><td>$25K–28K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">UT Dallas</td><td>Strong CS department</td><td>$28K–32K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>San Jose State University</td><td>Silicon Valley location, affordable</td><td>$20K–22K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>University of Texas at Arlington</td><td>Low cost, decent CS</td><td>$18K–22K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>SUNY Stony Brook</td><td>Good CS, moderate cost</td><td>$25K–28K</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in" style="background:rgba(34,197,94,0.06);border-color:rgba(34,197,94,0.2)">
+          <span>💰</span> <strong>Post-MS Salary:</strong> $80K–$150K (₹65L–₹1.2Cr) · <strong>Visa:</strong> H1B lottery system — uncertain but high reward · <strong>Total Cost:</strong> ₹35–60L (2 years)
+        </div>
+        <div class="country-warning fade-in" style="margin-top:8px">
+          <span>⚡</span> Can reduce to ₹15–25L with TA/RA assistantship. Email professors BEFORE applying with your AI project portfolio.
+        </div>
+      </div>
+
+      <!-- Germany -->
+      <div class="country-panel" id="germany">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>Germany</h3>
+            <p>Best ROI, Near-Free Tuition</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹20–30L</span><span class="cs-label">Total Cost (BEST)</span></div>
+            <div class="cs"><span class="cs-val highlight">€50K–€75K</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">₹9–12L/yr</span><span class="cs-label">Living Cost</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>Tier</th><th>University</th><th>Why Choose</th><th>Tuition</th></tr></thead>
+            <tbody>
+              <tr><td><span class="card-tag tag-red">🌟 Dream</span></td><td class="highlight">TU Munich</td><td>#1 in Germany, strong AI</td><td>~€300/sem</td></tr>
+              <tr><td><span class="card-tag tag-red">🌟 Dream</span></td><td class="highlight">RWTH Aachen</td><td>Top engineering school</td><td>~€300/sem</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">TU Darmstadt</td><td>Good CS/AI programs</td><td>~€300/sem</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td>University of Stuttgart</td><td>Strong engineering</td><td>~€1,500/sem</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td>University of Freiburg</td><td>Good AI/Robotics</td><td>~€300/sem</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>University of Passau</td><td>Accepts lower CGPA</td><td>~€300/sem</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>Otto von Guericke Magdeburg</td><td>Easy admission</td><td>~€300/sem</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in" style="background:rgba(34,197,94,0.06);border-color:rgba(34,197,94,0.2)">
+          <span>💰</span> <strong>Post-MS Salary:</strong> €50K–€75K (₹45L–₹70L) · <strong>Living Cost:</strong> ₹9–12L/year · <strong>Total Cost:</strong> ₹20–30L (2 years) — <strong>BEST VALUE</strong>
+        </div>
+        <div class="country-warning fade-in" style="margin-top:8px;background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.2)">
+          <span>⚠️</span> <strong>90% programs are in German.</strong> English-taught MS programs exist but are limited and competitive. Start learning German NOW if serious about Germany. <strong>Blocked account required:</strong> €11,208 (~₹10L) before visa approval.
+        </div>
+      </div>
+
+      <!-- Canada -->
+      <div class="country-panel" id="canada">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>Canada</h3>
+            <p>Best PR Pathway</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹25–45L</span><span class="cs-label">Total Cost</span></div>
+            <div class="cs"><span class="cs-val highlight">CAD 70K–110K</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">PGWP → PR</span><span class="cs-label">3yr Work Permit</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>Tier</th><th>University</th><th>Why Choose</th><th>Tuition/Year</th></tr></thead>
+            <tbody>
+              <tr><td><span class="card-tag tag-red">🌟 Dream</span></td><td class="highlight">University of Waterloo</td><td>Top CS in Canada, co-op</td><td>CAD 55–60K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">Concordia University</td><td>Good CS, Montreal (low cost)</td><td>CAD 25–30K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td>University of Ottawa</td><td>Bilingual advantage</td><td>CAD 28–35K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>University of Windsor</td><td>Affordable, good for PR</td><td>CAD 20–25K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>Memorial University</td><td>Cheapest in Canada</td><td>CAD 12–15K</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in" style="background:rgba(34,197,94,0.06);border-color:rgba(34,197,94,0.2)">
+          <span>💰</span> <strong>Post-MS Salary:</strong> CAD 70K–110K (₹42L–₹65L) · <strong>PR Pathway:</strong> PGWP (3-year work permit after MS) → PR possible · <strong>Total Cost:</strong> ₹25–45L (2 years)
+        </div>
+        <div class="country-warning fade-in" style="margin-top:8px;background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.2)">
+          <span>⚠️</span> Canada's economy is cooling. Job market tighter than 2022-2023. Research current situation before committing.
+        </div>
+      </div>
+
+      <!-- UK -->
+      <div class="country-panel" id="uk">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>United Kingdom</h3>
+            <p>1-year Master's · Fast degree · Strong unis</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹32–50L</span><span class="cs-label">Total Cost</span></div>
+            <div class="cs"><span class="cs-val highlight">₹50–80L</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">2yr PSW</span><span class="cs-label">Work Visa</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>Tier</th><th>University</th><th>Why Choose</th><th>Tuition</th></tr></thead>
+            <tbody>
+              <tr><td><span class="card-tag tag-red">🌟 Dream</span></td><td class="highlight">Imperial College London</td><td>Top for CS/AI</td><td>£35–40K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td class="highlight">University of Edinburgh</td><td>Strong AI research</td><td>£30–35K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td>University of Manchester</td><td>Good CS programs</td><td>£28–32K</td></tr>
+              <tr><td><span class="card-tag tag-amber">🎯 Target</span></td><td>King's College London</td><td>London location</td><td>£28–33K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>University of Leicester</td><td>Lower cost</td><td>£20–24K</td></tr>
+              <tr><td><span class="card-tag tag-green">✅ Safe</span></td><td>Coventry University</td><td>Easy admission</td><td>£18–22K</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in">
+          <span>⚡</span> UK is expensive. Choose ONLY if you get into a strong university with good ROI. 1-year MS = faster but less depth.
+        </div>
+      </div>
+
+      <!-- Japan -->
+      <div class="country-panel" id="japan">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>Japan</h3>
+            <p>Best for Research + Fully Funded (MEXT)</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹0–30L</span><span class="cs-label">Total Cost</span></div>
+            <div class="cs"><span class="cs-val highlight">₹28–45L</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">MEXT</span><span class="cs-label">Full Scholarship</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>University</th><th>Why Choose</th><th>Scholarship</th><th>Tuition</th></tr></thead>
+            <tbody>
+              <tr><td class="highlight">University of Tokyo</td><td>#1 in Asia for research</td><td><span class="card-tag tag-green">MEXT</span></td><td>¥535K/yr (~₹3L)</td></tr>
+              <tr><td class="highlight">Kyoto University</td><td>Strong AI/Robotics</td><td><span class="card-tag tag-green">MEXT</span></td><td>¥535K/yr</td></tr>
+              <tr><td class="highlight">Tokyo Institute of Technology</td><td>Engineering focus</td><td><span class="card-tag tag-green">MEXT</span></td><td>¥535K/yr</td></tr>
+              <tr><td>Osaka University</td><td>Good CS programs</td><td><span class="card-tag tag-green">MEXT</span></td><td>¥535K/yr</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in" style="background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.2)">
+          <span>💰</span> <strong>Post-MS Salary:</strong> ¥5M–8M (₹28L–₹45L) · <strong>MEXT Scholarship:</strong> Tuition + ₹1.2L/month stipend + flights — <strong>FULLY FREE</strong> · <strong>Total Cost (without MEXT):</strong> ₹15–25L
+        </div>
+        <div class="country-warning fade-in" style="margin-top:8px;background:rgba(249,115,22,0.06);border-color:rgba(249,115,22,0.2)">
+          <span>📝</span> Japanese language helps A LOT for jobs. English-taught programs exist but job market favors Japanese speakers. Your CGPA 7.5 qualifies!
+        </div>
+      </div>
+
+      <!-- South Korea -->
+      <div class="country-panel" id="korea">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>South Korea</h3>
+            <p>Strong AI + Semiconductors + Scholarships</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹0–30L</span><span class="cs-label">Total Cost</span></div>
+            <div class="cs"><span class="cs-val highlight">₹30–45L</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">GKS</span><span class="cs-label">Full Scholarship</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>University</th><th>Why Choose</th><th>Scholarship</th><th>Special</th></tr></thead>
+            <tbody>
+              <tr><td class="highlight">KAIST</td><td>MIT of Korea</td><td><span class="card-tag tag-green">Full free for ALL intl</span></td><td>Auto scholarship on admission</td></tr>
+              <tr><td class="highlight">Seoul National University</td><td>Top ranked</td><td><span class="card-tag tag-green">GKS</span></td><td>Strong research</td></tr>
+              <tr><td class="highlight">POSTECH</td><td>Strong research, small class</td><td><span class="card-tag tag-green">GKS</span></td><td>Intensive programs</td></tr>
+              <tr><td>Yonsei University</td><td>Good AI programs</td><td><span class="card-tag tag-green">GKS</span></td><td>Seoul location</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in" style="background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.2)">
+          <span>💰</span> <strong>Post-MS Salary:</strong> ₹30L–₹45L equivalent · <strong>GKS Scholarship:</strong> Tuition + stipend + flights — <strong>FULLY FREE</strong> · <strong>Total Cost (without GKS):</strong> ₹15–25L
+        </div>
+        <div class="country-warning fade-in" style="margin-top:8px;background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.2)">
+          <span>✅</span> KAIST gives FULL scholarship to ALL international students automatically. GKS includes 1 year Korean language + 2 years MS = 3 years fully funded. Your CGPA qualifies!
+        </div>
+      </div>
+
+      <!-- Singapore -->
+      <div class="country-panel" id="singapore">
+        <div class="country-header fade-in">
+          <div class="country-meta">
+            <h3>Singapore</h3>
+            <p>Highest Asian Salary · Finance + AI · Elite hub</p>
+          </div>
+          <div class="country-stats">
+            <div class="cs"><span class="cs-val">₹35–50L</span><span class="cs-label">Total Cost</span></div>
+            <div class="cs"><span class="cs-val highlight">₹37–62L</span><span class="cs-label">Post-MS Salary</span></div>
+            <div class="cs"><span class="cs-val">Competitive</span><span class="cs-label">Admission</span></div>
+          </div>
+        </div>
+        <div class="table-wrap fade-in">
+          <table class="table">
+            <thead><tr><th>University</th><th>Why Choose</th><th>Tuition/Year</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td class="highlight">National University of Singapore (NUS)</td><td>Top 10 globally</td><td>SGD 35–45K</td><td>Very competitive</td></tr>
+              <tr><td class="highlight">Nanyang Technological University (NTU)</td><td>Strong AI/Engineering</td><td>SGD 35–45K</td><td>Excellent ROI</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="country-warning fade-in">
+          <span>⚡</span> Very competitive admission. Strong profile required. But excellent ROI if accepted — high salaries in compact, safe city.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ WHAT YOU NEED ═══ -->
+  <section class="section" id="requirements">
+    <div class="container">
+      <div class="section-label fade-in">Your Current Status</div>
+      <h2 class="section-title fade-in">What YOU Need for Applications</h2>
+      <div class="table-wrap fade-in" style="max-width:800px">
+        <table class="table">
+          <thead><tr><th>Requirement</th><th>Your Current</th><th>Target</th></tr></thead>
+          <tbody>
+            <tr><td class="highlight">CGPA</td><td>7.5</td><td>OK for Target/Safe universities</td></tr>
+            <tr><td class="highlight">IELTS</td><td>Not taken</td><td>7+ needed</td></tr>
+            <tr><td class="highlight">GRE</td><td>Not taken</td><td>310+ helps (optional many places)</td></tr>
+            <tr><td class="highlight">Projects</td><td>3 on resume</td><td>Need to UNDERSTAND them deeply</td></tr>
+            <tr><td class="highlight">GitHub</td><td>Exists</td><td>Need consistent commits</td></tr>
+            <tr><td class="highlight">SOP</td><td>Not written</td><td>Start by Month 8</td></tr>
+            <tr><td class="highlight">LORs</td><td>Not requested</td><td>Ask 2 professors + 1 mentor</td></tr>
+            <tr><td class="highlight">Research papers</td><td>None</td><td>Optional but powerful for scholarships</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import './src/style.css'
+    import './src/pages.css'
+    import { initNav, initScrollReveal, getNavHTML, getFooterHTML } from './src/shared.js'
+
+    document.getElementById('nav-root').innerHTML = getNavHTML();
+    document.getElementById('footer-root').innerHTML = getFooterHTML();
+    initNav(); initScrollReveal();
+
+    // Country tabs
+    document.querySelectorAll('.country-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.country-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.country-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.country).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

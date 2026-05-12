@@ -1,0 +1,284 @@
+/* ═══ SHARED PAGE-SPECIFIC STYLES ═══ */
+
+/* Country Tabs */
+.country-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.country-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  transition: all 0.3s var(--ease-out);
+}
+.country-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+.country-tab.active {
+  background: var(--gradient-amber);
+  color: #0a0a0a;
+  border-color: transparent;
+  font-weight: 600;
+}
+.country-flag { font-size: 1.1rem; }
+
+/* Country Panel */
+.country-panel { display: none; }
+.country-panel.active { display: block; }
+
+.country-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+.country-meta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.country-meta p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.country-stats {
+  display: flex;
+  gap: 24px;
+}
+.cs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cs-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.cs-label {
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Country Warning */
+.country-warning {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.country-warning span:first-child {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Scholarship Cards */
+.scholarship-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out);
+}
+.scholarship-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--glow-small);
+}
+.scholarship-header {
+  padding: 20px 24px;
+  background: var(--gradient-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scholarship-header h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.scholarship-body {
+  padding: 20px 24px;
+}
+.scholarship-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+}
+.scholarship-row:last-child { border-bottom: none; }
+.scholarship-row .sr-label { color: var(--text-tertiary); }
+.scholarship-row .sr-val { font-weight: 500; color: var(--text-primary); }
+
+/* Steps */
+.steps { display: flex; flex-direction: column; gap: 0; }
+.step-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+}
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gradient-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  flex-shrink: 0;
+}
+.step-content {
+  flex: 1;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+}
+.step-content h5 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.step-content p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.step-item:last-child .step-content { border-bottom: none; }
+
+/* Finance cards */
+.cost-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.cost-card h4 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.82rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.cost-row:last-child { border-bottom: none; }
+.cost-label { color: var(--text-tertiary); }
+.cost-val { font-weight: 600; }
+.cost-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 0;
+  margin-top: 8px;
+  border-top: 2px solid var(--border-accent);
+  font-weight: 700;
+  color: var(--text-accent);
+}
+
+/* SOP Sections */
+.sop-para {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: all 0.3s var(--ease-out);
+}
+.sop-para:hover {
+  border-color: var(--border-accent);
+}
+.sop-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: var(--gradient-amber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.sop-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  margin-bottom: 6px;
+}
+.sop-example {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: rgba(249,115,22,0.05);
+  border-left: 3px solid var(--text-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Skill bars */
+.skill-bar-wrap {
+  margin-bottom: 16px;
+}
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 0.82rem;
+}
+.skill-bar-name { font-weight: 500; }
+.skill-bar-pct { color: var(--text-accent); font-weight: 600; }
+.skill-bar {
+  height: 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: var(--gradient-amber);
+  border-radius: 4px;
+  transition: width 1.5s var(--ease-out);
+  width: 0;
+}
+.skill-bar-fill.animated { /* width set via inline style */ }
+
+@media (max-width: 680px) {
+  .country-header { flex-direction: column; align-items: flex-start; }
+  .country-stats { gap: 16px; }
+}
