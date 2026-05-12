@@ -90,8 +90,18 @@
       <div class="section-label fade-in">Country-Wise Directory</div>
       <h2 class="section-title fade-in">All Scholarships by Country</h2>
 
+      <div class="country-tabs fade-in" id="scholarshipTabs">
+        <button class="country-tab active" data-country="sch-japan"><span class="country-flag">🇯🇵</span> Japan</button>
+        <button class="country-tab" data-country="sch-korea"><span class="country-flag">🇰🇷</span> S. Korea</button>
+        <button class="country-tab" data-country="sch-germany"><span class="country-flag">🇩🇪</span> Germany</button>
+        <button class="country-tab" data-country="sch-usa"><span class="country-flag">🇺🇸</span> USA</button>
+        <button class="country-tab" data-country="sch-canada"><span class="country-flag">🇨🇦</span> Canada</button>
+        <button class="country-tab" data-country="sch-uk"><span class="country-flag">🇬🇧</span> UK</button>
+        <button class="country-tab" data-country="sch-eu"><span class="country-flag">🇪🇺</span> EU & Others</button>
+      </div>
+
       <!-- JAPAN extras -->
-      <h3 class="fade-in" style="margin:32px 0 16px;font-size:1.1rem">🇯🇵 Japan — Additional Funding</h3>
+      <div class="country-panel active" id="sch-japan">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>Scholarship</th><th>Amount</th><th>Details</th><th>How</th></tr></thead><tbody>
           <tr><td class="highlight">JASSO</td><td>¥48,000/mo (~₹27K)</td><td>For students already admitted</td><td>University nominates you after admission</td></tr>
@@ -122,8 +132,10 @@
         </div>
       </div>
 
+      </div>
+
       <!-- KOREA extras -->
-      <h3 class="fade-in" style="margin:40px 0 16px;font-size:1.1rem">🇰🇷 South Korea — Additional Funding</h3>
+      <div class="country-panel" id="sch-korea">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>Scholarship</th><th>Amount</th><th>Details</th></tr></thead><tbody>
           <tr><td class="highlight">KAIST International</td><td>Full tuition + ₩350K/mo</td><td><strong>Automatic</strong> — ALL admitted international MS students get it</td></tr>
@@ -141,8 +153,10 @@
         </div>
       </div>
 
+      </div>
+
       <!-- GERMANY extras -->
-      <h3 class="fade-in" style="margin:40px 0 16px;font-size:1.1rem">🇩🇪 Germany — Additional Funding</h3>
+      <div class="country-panel" id="sch-germany">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>Scholarship</th><th>Amount</th><th>Details</th></tr></thead><tbody>
           <tr><td class="highlight">Deutschlandstipendium</td><td>€300/month</td><td>1 year renewable — apply through your German uni AFTER admission</td></tr>
@@ -171,8 +185,10 @@
         </div>
       </div>
 
+      </div>
+
       <!-- USA extras -->
-      <h3 class="fade-in" style="margin:40px 0 16px;font-size:1.1rem">🇺🇸 USA — Funding Options</h3>
+      <div class="country-panel" id="sch-usa">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>University</th><th>Scholarship</th><th>Amount</th></tr></thead><tbody>
           <tr><td class="highlight">Arizona State</td><td>Dean's Fellowship</td><td>$10K–$20K/year</td></tr>
@@ -201,8 +217,10 @@
         </div>
       </div>
 
+      </div>
+
       <!-- CANADA extras -->
-      <h3 class="fade-in" style="margin:40px 0 16px;font-size:1.1rem">🇨🇦 Canada — Additional Funding</h3>
+      <div class="country-panel" id="sch-canada">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>Scholarship</th><th>Amount</th><th>Details</th></tr></thead><tbody>
           <tr><td class="highlight">Vanier CGS</td><td>CAD $50,000/yr (3yr)</td><td>PhD only — extremely competitive</td></tr>
@@ -224,8 +242,10 @@
         </div>
       </div>
 
+      </div>
+
       <!-- UK extras -->
-      <h3 class="fade-in" style="margin:40px 0 16px;font-size:1.1rem">🇬🇧 UK — Additional Funding</h3>
+      <div class="country-panel" id="sch-uk">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>Scholarship</th><th>Amount</th><th>Details</th></tr></thead><tbody>
           <tr><td class="highlight">Commonwealth Scholarship</td><td>Tuition + £1,236/mo + flights</td><td>For developing country citizens — Deadline: Oct–Dec — cscuk.fcdo.gov.uk</td></tr>
@@ -242,8 +262,10 @@
         </div>
       </div>
 
+      </div>
+
       <!-- EU/Erasmus -->
-      <h3 class="fade-in" style="margin:40px 0 16px;font-size:1.1rem">🇪🇺 Europe + Others</h3>
+      <div class="country-panel" id="sch-eu">
       <div class="table-wrap fade-in">
         <table class="table"><thead><tr><th>Scholarship</th><th>Country</th><th>Amount</th><th>Details</th></tr></thead><tbody>
           <tr><td class="highlight">ETH Zurich Excellence</td><td>🇨🇭 Switzerland</td><td>CHF 12,000 + tuition waiver</td><td>Top 3% applicants — extremely competitive</td></tr>
@@ -261,6 +283,7 @@
             <div class="step-item"><div class="step-num">3</div><div class="step-content"><h5>Submit Oct–Jan</h5><p>Each consortium evaluates independently → Results: Mar–Apr → Accept → Visa for first country</p></div></div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -338,6 +361,16 @@
     document.getElementById('nav-root').innerHTML = getNavHTML();
     document.getElementById('footer-root').innerHTML = getFooterHTML();
     initNav(); initScrollReveal();
+
+    // Country tabs
+    document.querySelectorAll('.country-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.country-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.country-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.country).classList.add('active');
+      });
+    });
   </script>
 </body>
 </html>
