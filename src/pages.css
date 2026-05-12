@@ -5,9 +5,22 @@
   display: flex;
   gap: 6px;
   margin-bottom: 28px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 8px; /* For scrollbar */
+  -webkit-overflow-scrolling: touch;
+}
+.country-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+.country-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+.country-tabs::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
 }
 .country-tab {
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 6px;
