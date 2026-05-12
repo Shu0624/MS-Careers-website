@@ -282,3 +282,22 @@
   .country-header { flex-direction: column; align-items: flex-start; }
   .country-stats { gap: 16px; }
 }
+
+/* Table Links with Favicons */
+.uni-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s var(--ease-out);
+}
+.uni-link:hover {
+  color: var(--text-accent);
+}
+.uni-link img {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  opacity: 0.9;
+}
